@@ -1,0 +1,105 @@
+@media(min-width:992px) and (max-width:1199.98px){
+
+ 
+}
+
+@media(min-width:768px) and (max-width:991.98px){
+/* header part responsice start */
+.bg-menu {
+    background: #0F3460;
+}
+.menu-icon i{
+    margin: 0 10px;
+}
+/* header part responsice end */
+
+/* about part responsive start */
+.about-header h2 {
+	font-size: 40px;
+}
+/* about part responsive end */
+}
+
+@media(min-width:576px) and (max-width:767.98px){
+/* header part responsice start */
+.bg-menu {
+    background: #0F3460;
+}
+.menu-icon i{
+    margin: 0 10px;
+}
+/* header part responsice end */
+
+/* home part responsive start */
+.home-info h2 {
+	font-size: 55px;
+	line-height: 70px;
+}
+/* home part responsive end */ 
+
+/* footer part responsive start */
+.footer-info p {
+	font-size: 15px;
+}
+/* footer part responsive end */
+}
+
+@media (max-width:767.98px){
+
+}
+
+@media (max-width:575.98px){
+    /* header part responsice start */
+    .bg-menu{
+        background: #0F3460;
+    }
+    .menu-icon i{
+        margin: 0 10px;
+    }
+    /* header part responsice end */
+
+    /* home part responsive start */
+    .home-info h2 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    a.home-btn1{
+        margin-bottom: 20px;
+        padding: 12px 38px;
+    }
+    /* home part responsive end */
+
+    /* about part responsive start */
+    .about-header h2 {
+        font-size: 40px;
+    }
+    .about-right{
+        margin-top: 50px;
+    }
+    /* about part responsive end */
+
+    /* igredients part responsive start */
+    .inner-header h2 {
+        font-size: 26px;
+    }
+    .inner-info p {
+        font-size: 15px;
+    }
+    .inner-img img{
+        margin-bottom: 30px;
+    }
+    /* igredients part responsive end */
+
+    /* review part responsive start */
+    .review-inner{
+        padding: 30px 10px;
+    }
+    .review-inner i.next-one{
+        display: none;
+    }
+    .review-inner i.prev-one{
+        display: none;
+    }
+    /* review part responsive end */
+  
+}

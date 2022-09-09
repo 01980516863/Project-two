@@ -1,0 +1,597 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:wght@400;700&display=swap');
+/* common part css start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul, ol{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* common part css end */
+
+/* preloder part css start */
+.preloder{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #645CAA;
+    height: 100%;
+    width: 100%;
+    transition: 1s all easy;
+    opacity: 1;
+    visibility: visible;
+    z-index: 99999999;
+  }
+  
+  .done{
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .circle, .circle:before, .circle:after{
+    border: 3px solid transparent;
+  /*   border: 3px solid greeen; */
+    border-radius: 50%;
+  }
+  
+  .circle{
+    height: 110px;
+    width: 110px;
+    margin: 200px auto;
+    position: relative;
+    border-top-color: gold;
+    animation-name: spin;
+     animation-duration:1.1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  
+  .circle:before, .circle:after{
+    content: "";
+    position: absolute;
+  }
+  
+  .circle:before{
+    top: 10px;
+    left:10px;
+    bottom: 10px;
+    right: 10px;
+    border-top-color: red;
+    animation-name: spin;
+     animation-duration:2.1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-duration: 2.1s;
+  }
+  
+  .circle:after{
+    top: 23px;
+    left:23px;
+    bottom: 23px;
+    right: 23px;
+    border-top-color: indigo;
+    animation-name: spin;
+    animation-delay: 1.3s;
+    animation-duration:3.1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  
+  @keyframes spin{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+/* preloder part css end */
+
+/* menu part css start */
+.bg-menu{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+.logo{
+    width: 110px;
+}
+.bg-menu ul li{
+    padding: 10px 15px;
+}
+.bg-menu ul li a{
+    color: #ebe8e1 !important;
+    font-size: 18px;
+    font-weight: 400;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.bg-menu ul li a:hover{
+    color: #EB1D36 !important;
+}
+.menu-icon i{
+    font-size: 18px;
+    color: #dab33e;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.menu-icon i:hover{
+    color: #ebe8e1;
+}
+.nav-item a.active{
+    color: #EB1D36 !important;
+    position: relative;
+}
+.nav-item a.active::after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #d1d1d1;
+    top: 0;
+    left: 0;
+}
+.navbar-toggler{
+    color: #fff  !important;
+}
+.navbar-toggler:focus {
+	box-shadow: none !important;
+}
+.bg-color{
+    background: #0F3460;
+    box-shadow: 2px 2px 2px 2px #cc9900;
+    animation: menu-color 1s;
+    -webkit-animation: menu-color 1s;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+@keyframes menu-color{
+    from{
+        top: -50px;
+    }
+    to{
+        top: 0;
+    }
+}
+/* menu part css end */
+
+/* home part css start */
+#home{
+    padding: 180px 0;
+    background: url(../images/banner-back.jpg) no-repeat center /cover;
+    position: relative;
+    z-index: 2;
+}
+#home::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(10, 9, 9, 0.4);
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.home-info h2{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 80px;
+}
+.home-img{
+    margin: 30px 0;
+}
+.home-img img{
+    width: 200px;
+}
+.home-btn {
+    margin-top: 50px !important;
+}
+.home-btn a{
+    padding: 12px 35px;
+    margin: 0 5px;
+    background: rgb(209, 209, 209,0.3);
+    border: 0.5px solid #d1d1d1;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.home-btn a:hover{
+    background: rgb(34, 34, 30,0.3);
+    border: 0.5px solid transparent;
+    color: #de28e2;
+}
+/* home part css end */
+
+/* about part css start */
+#about{
+    padding: 100px 0;
+    background: #ebf0f0;
+}
+.about-left{
+    margin-top: 30px;
+}
+.about-header h2{
+    font-size: 45px;
+    font-weight: 400;
+    color: #dab33e;
+}
+.about-left-img{
+    margin-top: 10px;
+}
+.about-left-img img{
+    width: 200px;
+}
+.about-info{
+    margin-top: 40px;
+}
+.about-info p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #4c4c4c;
+}
+.about-img{
+    margin-top: 50px;
+}
+.about-right img{
+    width: 100%;
+}
+/* about part css end */
+
+/* igredients part css start */
+#igredients{
+    padding: 100px 0;
+    background: url(../images/igredient-bac.png) no-repeat center /cover;
+    position: relative;
+    z-index: 3;
+}
+#igredients::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: rgba(10, 9, 9, 0.4);
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+.item-inner{
+    padding: 80px 50px;
+    background: rgb(18, 18, 17, 0.5);
+}
+.inner-header h2{
+    color: #fff;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 50px;
+}
+.item-header-img{
+    margin: 20px 0px;
+}
+.item-header-img img{
+    width: 200px;
+}
+.inner-info p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #fff;
+}
+.inner-img{
+    margin-top: 40px;
+}
+.inner-img img{
+    width: 100px;
+}
+/* igredients part css end */
+
+/* menu part css start */
+#menu{
+    padding: 100px 0;
+}
+.menu-header h2{
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #dab33e;
+}
+.menu-header img{
+    width: 180px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.menu-main{
+    margin-bottom: 25px;
+}
+.menu-inner{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dab33e;
+}
+.menu-inner h5{
+    font-size: 20px;
+    color: #dab33e;
+}
+.menu-main p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 3px;
+    color: #4c4c4c;
+}
+.bottom-main{
+    margin-bottom: 25px;
+}
+.bottom-main h6{
+    text-align: center;
+    font-size: 12px;
+    background-color: #dab33e;
+    color: #fff;
+    width: 15%;
+}
+.bottom-inner{
+    border: 1px solid #dab33e;
+}
+.bottom-info{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #dab33e; 
+    margin: 0 5px;
+}
+.bottom-info h5{
+    font-size: 20px;
+    color: #dab33e;
+}
+.bottom-inner p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 5px;
+    color: #4c4c4c;
+    padding: 7px 0;
+}
+/* menu part css end */
+
+/* reviews part css start */
+#review{
+    padding: 120px 0;
+    background: url(../images/review-back.jpg) no-repeat center /cover;
+}
+.review-inner{
+    padding: 80px 80px;
+    background: rgb(23, 36, 30,0.7);
+    text-align: center;
+    position: relative;
+}
+.review-inner h2{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 60px;
+}
+.review-inner img{
+    width: 200px;
+    margin: 10px 0 20px 0;
+}
+.review-item p{
+    font-size: 16px;
+    color: #fff;
+    line-height: 28px;
+}
+.review-item h6{
+    font-size: 16px;
+    line-height: 28px;
+    color: #ebf0f0;
+    margin-top: 20px;
+}
+.review-inner i.next-one{
+    position: absolute;
+    left: 20px;
+    top: 56%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #dab33e;
+    color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.review-inner i.next-one:hover{
+    background: #fff;
+    color: #dab33e;
+}
+.review-inner i.prev-one{
+    position: absolute;
+    right: 20px;
+    top: 56%;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #dab33e;
+    color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.review-inner i.prev-one:hover{
+    background: #fff;
+    color: #dab33e;
+}
+/* reviews part css end */
+
+/* reservation part css start */
+#reservation{
+    padding: 100px 0;
+    background: url(../images/reservation.jpg) no-repeat center /cover;
+}
+.reservation-img img{
+    width: 100%;
+    padding-bottom: 25px;
+}
+.reservation-header h2{
+    font-size: 35px;
+    color: #cc9900;
+    font-weight: 400;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
+.reservation-header img{
+    width: 200px;
+}
+.reservation-header p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #0F3460;
+    line-height: 28px;
+    margin-top: 15px;
+}
+.form label{
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #cc9900;
+    margin-bottom: 10px;
+}
+.form input{
+    margin-bottom: 10px;
+}
+.form input:focus{
+    outline: none;
+    border: 0;
+    box-shadow: none;
+}
+.form input::placeholder{
+    color: #cc9900;
+}
+.reservation-botttom a{
+    padding: 10px 32px !important;
+    background: #cc9900;
+    display: inline-block;
+}
+.reservation-bottom a {
+    background: #dab33e;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.reservation-bottom a:hover{
+    background: #fff;
+    color: #cc9900;
+}
+/* reservation part css end */
+
+/* footer part css start */
+footer{
+    padding: 100px 0;
+    background: #191919;
+}
+.footer-main{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.footer-header h2{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 45px;
+}
+.footer-header img{
+    width: 150px;
+    margin: 10px 0 30px 0;
+}
+.footer-info p{
+    color: #dfdfdf;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.footer-icon{
+    margin-top: 25px;
+}
+.footer-icon i{
+    font-size: 30px;
+    color: #fff;
+    margin: 0 4px;
+}
+/* footer part css end */
+
+/* scroll icon css start */
+.scroll-icon i{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background: #0F3460;
+    cursor: pointer;
+    color: #fff;
+    z-index: 99999999;
+    display: none;
+}
+
+/* scroll icon css end */
